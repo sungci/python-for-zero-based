@@ -1,0 +1,17 @@
+# 将小说的主要人物记录在文件中
+
+file1 = open('name.txt','w')
+file1.write(u'诸葛亮')
+#写入保存=关闭文件
+file1.close()
+
+file2 = open('name.txt')
+print(file2.read())
+file2.close()
+
+file3 = open('name.txt','a+')
+file3.write(u'张飞')
+#文件写完一次后需调整文件指针
+file3.seek(0)
+print(file3.read())
+file3.close()
